@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(#203 , #000);
+    overflow: auto;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100px;
+    border-bottom: 2px solid #fff;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#Controller{
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.ControllersStructure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 30px;
+    background-color: #406;
+    border:  2px solid #fff;
+    color: #fff;
+    border-radius: 10px;
+}
+
+@keyframes ShowPhrase {
+    0%{
+        border-left: 0px solid transparent;
+        border-right: 0px solid transparent;
+        color: transparent;
+        border-radius: 0px;
+        margin-left: 25vw;
+    }
+    100%{
+        border-left: 10px solid #fff;
+        border-right: 10px solid #fff;
+        border-radius: 10px;
+        color: #fff;
+        margin-left: 0%;
+    }
+}
+
+#InteractiveStructure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50px;
+    color: transparent;
+}
+.PushMessage{
+    animation: 3s ShowPhrase infinite alternate;
+}
+
+#Game{
+display: flex;
+flex-direction: column;
+width: 50vw;
+height: 70vh;
+border: 2px solid #fff;
+justify-content: center;
+align-items: center;
+}
+.GameLine{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+}
+#SpeakerData{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+.GameButtons{
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+#RButton{
+background-color: #201010;
+border: 2px groove white;
+color: #f00;
+}
+
+#GButton{
+    background-color: #102010;
+    border: 2px groove white;
+    color: #0f0;
+}
+
+#BButton{
+    background-color: #101020;
+    border: 2px groove white;
+    color: #00f;
+}
+
+#YButton{
+    background-color: #202010;
+    border: 2px groove white;
+    color: #ff0;
+}
+
+/* @KeyFrames Blinks */
+@keyframes BlinkRed{
+0%{
+    background-color: #501010;
+    
+    border: 2px groove white;
+}
+100%{
+    background-color: #f00;
+    
+    border: 2px ridge white;
+}
+}
+@keyframes BlinkGreen{
+    0%{
+        background-color: #105010;
+        
+        border: 2px groove white;
+    }
+    100%{
+        background-color: #0f0;
+        
+        border: 2px ridge white;
+    }
+    }
+
+@keyframes BlinkBlue{
+        0%{
+            background-color: #101050;
+            
+            border: 2px groove white;
+        }
+        100%{
+            background-color: #00f;
+            
+            border: 2px ridge white;
+        }
+    }
+
+@keyframes BlinkYellow{
+            0%{
+                background-color: #505010;
+                
+                border: 2px groove white;
+            }
+            100%{
+                background-color: #ff0;
+                
+                border: 2px ridge white;
+            }
+            }
+/* Classes Blink Animation */ 
+
+.BlinkRed{
+    animation: 0.25s BlinkRed infinite alternate;
+}
+.BlinkGreen{
+    animation: 0.25s BlinkGreen infinite alternate;
+}
+.BlinkBlue{
+    animation: 0.25s BlinkBlue infinite alternate;
+}
+.BlinkYellow{
+    animation: 0.25s BlinkYellow infinite alternate;
+}
+
+/* Click Animations  KeyFrames*/ 
+
+@keyframes BorderCircleRed {
+0%{
+    border:  1px solid white;
+    border-radius: 0px;
+}
+100%{
+    border: 1px solid #f00;
+    border-radius: 100px;
+}    
+}
+
+@keyframes BorderCircleGreen {
+    0%{
+        border:  1px solid white;
+        border-radius: 0px;
+    }
+    100%{
+        border: 1px solid #0f0;
+        border-radius: 100px;
+    }    
+    }
+
+    @keyframes BorderCircleBlue {
+        0%{
+            border:  1px solid white;
+            border-radius: 0px;
+        }
+        100%{
+            border: 1px solid #00f;
+            border-radius: 100px;
+        }    
+        }
+
+        @keyframes BorderCircleYellow {
+            0%{
+                border:  1px solid white;
+                border-radius: 0px;
+            }
+            100%{
+                border: 1px solid #ff0;
+                border-radius: 100px;
+            }    
+            }
+
+            /* Border Animations Classes */
+
+
+            .BorderRed{
+                animation: 0.25s BorderCircleRed infinite alternate;
+            }
+
+            .BorderGreen{
+                animation: 0.25s BorderCircleGreen infinite alternate;
+            }
+
+            .BorderBlue{
+                animation: 0.25s BorderCircleBlue infinite alternate;
+            }
+
+            .BorderYellow{
+                animation: 0.25s BorderCircleYellow infinite alternate;
+            }
